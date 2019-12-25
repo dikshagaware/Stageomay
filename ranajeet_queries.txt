@@ -1,3 +1,4 @@
+Hello Ranajeet
 INSERT INTO category_level1(id,name) VALUES('competitions');
 INSERT INTO category_level1(id,name) VALUES('events');
 INSERT INTO category_level1(id,name) VALUES('sports');
