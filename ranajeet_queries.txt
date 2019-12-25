@@ -1,0 +1,42 @@
+INSERT INTO category_level1(id,name) VALUES('competitions');
+INSERT INTO category_level1(id,name) VALUES('events');
+INSERT INTO category_level1(id,name) VALUES('sports');
+INSERT INTO category_level1(id,name) VALUES('fests');
+INSERT INTO category_level1(id,name) VALUES('other');
+
+
+CREATE TABLE category_level2(
+    id int NOT NULL,
+    catId int NOT NULL,
+    name varchar(50),
+    PRIMARY KEY (id),
+    FOREIGN KEY (catId) REFERENCES category_level1(id)
+);
+
+INSERT INTO category_level2(catId,name) VALUES(1,'film & photography');
+
+
+INSERT INTO category_level2(catId,name) VALUES(1,'film & photography');
+INSERT INTO category_level2(catId,name) VALUES(1,'others');
+INSERT INTO category_level2(catId,name) VALUES(2,'workshops');
+INSERT INTO category_level2(catId,name) VALUES(2,'exibitions');
+INSERT INTO category_level2(catId,name) VALUES(2,'seminars');
+INSERT INTO category_level2(catId,name) VALUES(2,'conference');
+INSERT INTO category_level2(catId,name) VALUES(2,'meetup');
+INSERT INTO category_level2(catId,name) VALUES(3,'indoor');
+INSERT INTO category_level2(catId,name) VALUES(3,'outdoor');
+INSERT INTO category_level2(catId,name) VALUES(3,'marathon');
+INSERT INTO category_level2(catId,name) VALUES(4,'college fest');
+INSERT INTO category_level2(catId,name) VALUES(4,'university fest');
+INSERT INTO category_level2(catId,name) VALUES(5,'promotions');
+INSERT INTO category_level2(catId,name) VALUES(5,'online partenership');
+
+create table with foreign key
+
+CREATE TABLE category_level3(
+    id int NOT NULL AUTO_INCREMENT,
+    catId int NOT NULL,
+    name varchar(50),
+    PRIMARY KEY (id),
+    FOREIGN KEY (catId) REFERENCES category_level2(id)
+);
